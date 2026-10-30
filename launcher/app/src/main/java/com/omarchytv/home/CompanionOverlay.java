@@ -12,8 +12,8 @@ import android.widget.TextView;
 
 /**
  * v2.13 floating Grok Bot companion on the launcher: the mirrored bot (or Grok Bot's orange ball) in a corner,
- * blinking now and then and bobbing a few dp. It never takes D-pad focus on its own: long-press Menu arms it
- * (a ring shows), OK opens the chat, any other key disarms it. Touch / mouse can click it directly.
+ * blinking now and then and bobbing a few dp. It never takes D-pad focus on its own: the Blue key opens the chat;
+ * long-press Menu arms it (a ring shows), OK opens the chat, any other key disarms it. Touch / mouse can click it.
  * Experimental, tracks @tcballard's in-development Grok Bot Desktop Companion (MIT); my own code.
  */
 final class CompanionOverlay extends LinearLayout {
@@ -64,7 +64,7 @@ final class CompanionOverlay extends LinearLayout {
         name.setSingleLine(true);
         name.setGravity(Gravity.CENTER);
         addView(name, new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT));
-        setContentDescription("Grok Bot companion: long-press Menu, then OK");
+        setContentDescription("Grok Bot companion: Blue key, or long-press Menu then OK");
         setArmed(false);
     }
 
